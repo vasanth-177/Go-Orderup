@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<script src="./script.js"></script>
+
+<head>
+    <title>Hotel Details</title>
+</head>
+
+<body>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 70%;
+        }
+
+        td,
+        th {
+            border: 1px solid #000000;
+            text-align: left;
+            padding: 8px;
+        }
+
+        .dropdown {
+            text-align: center;
+            width: 100px;
+
+        }
+
+        .d1,
+        .d2 {
+            display: block;
+            /* margin:0 auto; */
+        }
+    </style>
+
+    <h1>ORDER UP!!</h1>
+    <div class="dropdown">
+        <select id="hotelType" class="d1" onchange="onChangeOption()">
+            <option value="getHotels" selected="true">All hotels</option>
+            <option value="getVegHotels">Vegeterian Hotels</option>
+            <option value="getNonVegHotels">Non-vegeterian Hotels</option>
+            <option value="getBothHotels">Both Vegeterian and Non-vegeterian</option>
+        </select>
+    </div>
+
+    <div id="data-table">
+        <table id="hotelDisplay">
+            <thead ID="oTHead0">
+                <tr>
+                    <th>Hotel Name</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody ID="oTBody0">
+
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="dropdown">
+        <select id="hotelDropDown" class="d2" onchange="onHotelChange()">
+        </select>
+    </div>
+    <br>
+    <br><br>
+
+    <button id="b1" onclick="getItems()">Show item</button>
+    <br><br><br><br><br><br>
+
+    <div id="data-table">
+        <table id="itemDisplay">
+            <thead ID="oTHead1">
+                <tr>
+                    <th>Item Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody ID="oTBody1">
+
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="dropdown">
+        <select id="itemDropDown" class="d1">
+        </select>
+    </div>
+    <br><br>
+    <div class="dropdown">
+        <select id="quantityDropDown" class="d2" >
+        
+        </select>
+    </div>
+    <br><br><br>
+    <button id="b2" onclick="add_items()">Add item</button>
+    <br><br><br>
+    <button id="b3" onclick="generate_bill()">Place order</button>
+    <br><br><br>
+
+
+
+
+
+</body>
+
+</html>
